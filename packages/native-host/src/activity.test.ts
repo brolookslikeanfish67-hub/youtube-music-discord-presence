@@ -40,4 +40,18 @@ describe("Discord activity mapping", () => {
     expect("startTimestamp" in result).toBe(false);
     expect("endTimestamp" in result).toBe(false);
   });
+
+  it("pads one-character titles and artists for Discord", () => {
+    const result = buildDiscordActivity({
+      title: "歌",
+      artists: ["人"],
+      playbackState: "playing",
+      positionSeconds: 5,
+      durationSeconds: 100,
+      observedAtMs: Date.now(),
+    });
+
+    expect(result.details).toBe("歌\u200B");
+    expect(result.state).toBe("人\u200B");
+  });
 });
