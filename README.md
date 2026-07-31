@@ -1,7 +1,7 @@
 # YouTube Music Discord Presence
 
 A local-first Brave extension for showing the current YouTube Music track as
-Discord Rich Presence. The primary target is Arch Linux with Brave Beta and the
+Discord Rich Presence. The primary target is Arch Linux and windows 11 and mac os and windows 10 with Brave Beta and the
 Discord desktop client.
 
 ## How it works
